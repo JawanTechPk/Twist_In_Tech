@@ -1,0 +1,204 @@
+.backImg{
+    background: url('../images/background2.jpeg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%; 
+
+    
+ }
+
+ .AppBarStyle{
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+}
+.btnhover{
+  transition: all 0.25s linear ;
+}
+.btnhover:hover{
+  -ms-transform: scale(4.6);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  border: 1px solid white;
+  
+
+}
+
+
+
+
+
+/*   Home Screen Styling   */
+
+.heading{
+  color: #f89500;
+  font-size: 4.5em;
+}
+
+
+.subBorder{
+  border: 1px solid white;
+  border-radius: 100px;
+ 
+}
+
+.btnSection{
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.7em;
+  padding: 10px;
+
+}
+
+.btnSection:hover{
+  transition: all 0.25s linear ;
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.7em;
+  padding: 10px;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+  
+}
+/*   Home Screen Styling   */
+
+/*   Services Screen Styling   */
+.servicesHeading{
+  color: #f89500;
+  font-size: 3.5em;
+  font-family: "Saira",sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+.servicesSubHeading{
+  font-family: "Saira",sans-serif;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+
+.Cardd:hover {
+    box-shadow: rgba(165, 165, 178, 0.2) 0px 7px 29px 0px;
+    transition: 0.8s;
+}
+
+.Cardd {
+    border: 1px;
+    width: 100%;
+    max-width: 400px;
+    min-height: 200px;
+    height: auto;
+    border-radius: 10px;    
+    cursor: pointer;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 5px 0px;
+    
+}
+.cardHeadings {
+   font-weight: bold;
+   
+}
+
+
+/*   Services Screen Styling   */
+
+
+/*   Details Screen Styling   */
+
+
+.detailsHeading{
+  color: #f89500;
+  font-size: 2.4em;
+  font-family: "Saira",sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.detailssubheading{
+  font-family: "Saira",sans-serif;
+  text-align: center;
+  font-size: 1em;
+}
+
+.DetailsBox:hover {
+  box-shadow: rgba(165, 165, 178, 0.2) 0px 7px 29px 0px;
+  transition: 0.8s;
+}
+
+.DetailsBox {
+  border: 1px;
+  
+  border-radius: 10px;    
+  cursor: pointer;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 5px 0px;
+  text-align: center;
+  
+  
+}
+
+/*   Details Screen Styling   */
+
+/*   Project Screen Styling   */
+.projectHeading{
+  color: #f89500;
+  font-size: 2.4em;
+  font-family: "Saira",sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+.projectSubHeading{
+  font-family: "Saira",sans-serif;
+  text-align: center;
+  font-size: 1em;
+}
+
+.ProjectBox:hover {
+  box-shadow: rgba(165, 165, 178, 0.2) 0px 7px 29px 0px;
+  transition: 0.8s;
+}
+
+.ProjectBox {
+  border: 1px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 160px;
+  border-radius: 10px;    
+  cursor: pointer;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 5px 0px;
+  /* align-items: center; */
+  text-align: center;
+  
+  
+}
+
+/*   Project Screen Styling   */
+
+
+/*   About Screen Styling   */
+.aboutHeading{
+  color: #f89500;
+  font-size: 2.4em;
+  font-family: "Saira",sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+/*   About Screen Styling   */
+/*   contact Screen Styling   */
+.inp{
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  min-height: 60px;
+  border-radius: 6px;
+}
+.inp::placeholder{
+  color: white;
+  margin-left: 10px;
+  
+}
+/*   contact Screen Styling   */
