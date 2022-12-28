@@ -27,6 +27,7 @@ import ServicesScreen from '../pages/services';
 import DetailsScreen from '../pages/details';
 import OurProject from '../pages/ourProject';
 import ContactScreen from '../pages/contact';
+import FooterScreen from '../pages/footer';
 
 
 // import '../styles/globals.css'
@@ -77,7 +78,7 @@ function Navbar(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box >
+        <Box className={styles.mainParent} >
             <CssBaseline />
             <AppBar component="nav" className={styles.AppBarStyle}     >
                 <Toolbar>
@@ -166,6 +167,9 @@ function Navbar(props) {
                 </Stack>
                 <Stack mb={5} mt={10} id='contactRoute'  alignItems='center' >
                     <ContactScreen />
+                </Stack>
+                <Stack  mt={10} id='contactRoute'  alignItems='center' >
+                   <FooterScreen />
                 </Stack>
 
             </Stack>

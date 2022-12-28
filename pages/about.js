@@ -25,10 +25,14 @@ const AboutScreen = () => {
                 <Image
                   src={sirImage}
                   quality={100}
+                  className={styles.bossImage}
                   style={{
                     objectFit: 'contain',
                     width: '100%',
                     height: 'auto',
+                    minWidth:'40px',
+                    maxWidth:'400px'
+                    
                     // minHeight:'500px'
                   }}
                 />

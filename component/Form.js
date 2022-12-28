@@ -52,7 +52,8 @@ export default function ContactUs() {
               </Grid>
               <Grid item sm={6} md={12} xs={12}    >
               <label>Message / FeedBack</label>
-                <input placeholder='Message / FeedBack' className={styles.inp} />
+              {/* <textarea */}
+                <textarea   placeholder='Message / FeedBack' className={styles.textArea} />
               </Grid>
 
 
