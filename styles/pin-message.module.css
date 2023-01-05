@@ -1,0 +1,24 @@
+.scpinmessage {
+  display: flex;
+  padding: 5px;
+  background-color: #f4f7f9;
+  cursor: pointer;
+}
+
+.scpinmessageimg {
+  border-radius: 15px;
+  align-self: center;
+  width: 45px;
+  height: 45px;
+  padding: 5px;
+}
+
+.scpinmessagedesc {
+  padding: 10px;
+  font-size: 12px;
+}
+
+.scpinmessagetitle {
+  font-size: 16px;
+  margin-bottom: 2px;
+}

@@ -28,6 +28,11 @@ import DetailsScreen from '../pages/details';
 import OurProject from '../pages/ourProject';
 import ContactScreen from '../pages/contact';
 import FooterScreen from '../pages/footer';
+import ChatApp from './Chat_App';
+import PopChat from './extra';
+import styless from '../styles/extra.module.css'
+
+
 
 
 // import '../styles/globals.css'
@@ -78,7 +83,9 @@ function Navbar(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box className={styles.mainParent} >
+        <Box className={styless.mainParent} >
+            <div className={styles.chatt}> <PopChat/></div>
+            
             <CssBaseline />
             <AppBar component="nav" className={styles.AppBarStyle}     >
                 <Toolbar>
@@ -147,10 +154,13 @@ function Navbar(props) {
             </Box>
             
             <Stack >
+           
+
                 <Stack mb={5} alignItems='center' >
                     <HomeScreen  />
 
                 </Stack>
+               
 
                 <Stack mb={5}  id='servicesRoute' alignItems='center' >
                     <ServicesScreen  />

@@ -45,10 +45,10 @@ const FooterScreen = () => {
 
                         <Typography variant='h5' textAlign={"start"} fontWeight={"bold"} display={"inline"}  ><span style={{borderBottom:"3px solid black"}}> Follow Us </span></Typography>
                       <Stack mb={10} mt={2} flexDirection={"row"} justifyContent={"center"}>
-                         <Typography ml={2} ><Link href="#" className={styles.hoveringIcon} ><BsFacebook size={25} /></Link></Typography>
-                        <Typography ml={2} ><Link href="#" className={styles.hoveringIcon} ><BsTwitter size={25} /></Link></Typography>
-                        <Typography ml={2} ><Link href="#" className={styles.hoveringIcon} ><BsInstagram size={25} /></Link></Typography>
-                        <Typography ml={2} ><Link href="#" className={styles.hoveringIcon} ><BsLinkedin size={25} /></Link></Typography>
+                         <Typography ml={2} ><Link href="#" className={styles.hoveringIcon} ><BsFacebook size={20} /></Link></Typography>
+                        <Typography ml={2} ><Link href="#" className={styles.hoveringIcon} ><BsTwitter size={20} /></Link></Typography>
+                        <Typography ml={2} ><Link href="#" className={styles.hoveringIcon} ><BsInstagram size={20} /></Link></Typography>
+                        <Typography ml={2} ><Link href="#" className={styles.hoveringIcon} ><BsLinkedin size={20} /></Link></Typography>
                         </Stack> 
                     </Stack>
                 </Grid>

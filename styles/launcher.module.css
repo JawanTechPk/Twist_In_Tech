@@ -1,0 +1,87 @@
+.sclauncher {
+  width: 60px;
+  height: 60px;
+  background-color: #f39314;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  border-radius: 50%;
+  box-shadow: none;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.sclauncher:before {
+  content: '';
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;  
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.sclauncher.opened {
+  visibility: hidden;
+}
+
+.sclauncher .scopenicon,
+.sclauncher .scclosedicon {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  transition: opacity 100ms ease-in-out, transform 100ms ease-in-out;
+}
+
+.sclauncher .scclosedicon {
+  transition: opacity 100ms ease-in-out, transform 100ms ease-in-out;
+  width: 60px;
+  height: 60px;
+
+}
+
+.sclauncher .scopenicon {
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+.sclauncher.opened .scopenicon {
+  transform: rotate(-90deg);
+  opacity: 1;
+}
+
+.sclauncher.opened .scclosedicon {
+  transform: rotate(-90deg);
+  opacity: 0;
+}
+
+.sclauncher.opened:before {
+  box-shadow: 0px 0px 400px 250px rgba(148, 149, 150, 0.2);
+}
+
+.sclauncher:hover {
+  box-shadow: 0 0px 27px 1.5px rgba(0,0,0,0.2);
+}
+
+.scnewmessagescount {
+  position: absolute;
+  top: -3px;
+  left: 41px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50%;
+	width: 22px;
+  height: 22px;
+  background: #ff4646;
+  color: white;
+  text-align: center;
+  margin: auto;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
+}

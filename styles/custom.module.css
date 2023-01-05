@@ -12,6 +12,7 @@
  .AppBarStyle{
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(6px);
+  z-index: 1;
 }
 .btnhover{
   transition: all 0.25s linear ;
@@ -222,9 +223,10 @@
 .hoveringIcon:hover{
   color: rgb(255, 206, 128);
 }
-.mainParent{
+/* .mainParent{
   scroll-behavior: smooth;
-}
+  position: relative;
+} */
 /*   contact Screen Styling   */
 
 
@@ -299,3 +301,14 @@
     font-size: 10px;
   }
 }
+/* .chatt{
+  position: fixed;
+  right:20px;
+  bottom: 20px;
+  z-index: 5;
+  
+} */
+
+/* / Message icon Section   / */
+
+/* / Message icon Section   / */

@@ -1,0 +1,140 @@
+.scuserinput {
+  min-height: 55px;
+  margin: 0px;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  background-color: #f4f7f9;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: background-color .2s ease,box-shadow .2s ease;
+}
+
+
+.scuserinputtext {
+  width: 300px;
+  resize: none;
+  border: none;
+  outline: none;
+  border-bottom-left-radius: 10px;
+  box-sizing: border-box;
+  padding: 18px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.33;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #565867;
+  -webkit-font-smoothing: antialiased;
+  max-height: 200px;
+  overflow: scroll;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scuserinputtext:empty:before {
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+  color: rgba(86, 88, 103, 0.3);
+  outline: none;
+}
+
+.scuserinputbuttons {
+  width: 100px;
+  position: absolute;
+  right: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.scuserinputbutton:first-of-type {
+  width: 40px;
+}
+
+.scuserinputbutton {
+  width: 30px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scuserinputbutton button {
+  cursor: pointer;
+}
+
+.scuserinputbuttons input[type="file"] {
+  display: none;
+}
+
+.scuserinputpickerwrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.scuserinput.active {
+  box-shadow: none;
+  background-color: white;
+  box-shadow: 0px -5px 20px 0px rgba(150, 165, 190, 0.2);
+}
+
+.scuserinputfile-icon,
+.scuserinputsend-icon {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  align-self: center;
+  outline: none;
+}
+
+.scuserinputfileicon path,
+.scuserinputsendicon path {
+  fill: rgba(86, 88, 103, 0.3);
+}
+
+.scuserinputfileicon:hover path,
+.scuserinputsendicon:hover path {
+  fill: rgba(86, 88, 103, 1);
+}
+
+.scuserinputemojiiconwrapper,
+.scuserinputsendiconwrapper,
+.scuserinputfileiconwrapper {
+  background: none;
+  border: none;
+  padding: 2px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scuserinputsend-icon-wrapper,
+.scuserinputfile-icon-wrapper {
+  flex-direction: row;
+}
+
+.scuserinputemojiiconwrapper:focus {
+  outline: none;
+}
+
+.scuserinputemojiicon {
+  height: 18px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.scuserinput--emoji-icon path, .scuserinput--emoji-icon circle {
+  fill: rgba(86, 88, 103, 0.3);
+}
+
+.scuserinput--emoji-icon-wrapper:focus .scuserinput--emoji-icon path,
+.scuserinput--emoji-icon-wrapper:focus .scuserinput--emoji-icon circle,
+.scuserinput--emoji-icon.active path,
+.scuserinput--emoji-icon.active circle,
+.scuserinput--emoji-icon:hover path,
+.scuserinput--emoji-icon:hover circle {
+  fill: rgba(86, 88, 103, 1);
+}

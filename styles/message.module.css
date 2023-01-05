@@ -1,0 +1,88 @@
+.scmessage {
+  width: 300px;
+  margin: auto;
+  padding-bottom: 10px;
+  display: flex;
+}
+
+.scmessagecontent {
+  width: 100%;
+  display: flex;
+}
+
+.scmessagecontent.sent {
+  justify-content: flex-end;
+}
+
+.scmessagecontent.sent .scmessageavatar {
+  display: none;
+}
+
+.scmessageavatar {
+  background-image: url(https://d13yacurqjgara.cloudfront.net/assets/avatar-default-aa2eab7684294781f93bc99ad394a0eb3249c5768c21390163c9f55ea8ef83a4.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+  align-self: center;
+  margin-right: 15px;
+}
+
+.scmessagetext {
+  padding: 17px 20px;
+  border-radius: 6px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  -webkit-font-smoothing: subpixel-antialiased;
+  word-wrap: break-word;
+  width: calc(100% - 90px);
+}
+
+.scmessagecontent.sent .scmessagetext {
+  color: white;
+  background-color: #f39314;
+  max-width: calc(100% - 120px);
+  word-wrap: break-word;
+}
+
+.scmessagecontent.received .scmessage--text {
+  color: #263238;
+  background-color: #f4f7f9;
+  margin-right: 40px;
+}
+
+.scmessageemoji {
+  font-size: 40px;
+}
+
+.scmessagefile {
+  background: white;
+  border: solid 1px #CCCDD1;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.scmessagefile p {
+  margin: 0px 0px 0px 10px;
+  color: rgba(86, 88, 103, 0.6);
+}
+
+.scmessagefile .sc-user-input--file-icon:hover path {
+  fill: rgba(86, 88, 103, 0.3);
+}
+
+@media (max-width: 450px) {
+  .scmessage {
+    width: 80%;
+  }
+}
