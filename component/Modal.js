@@ -7,6 +7,10 @@ import { Avatar, Input, Stack, TextField } from '@mui/material';
 import Link from 'next/link';
 import styles from '../styles/navbarCss.module.css'
 
+import axios from 'axios';
+import { apiHandle } from '../pages/config/apiHandle';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const style = {
   position: 'absolute',
@@ -29,12 +33,59 @@ export default function BasicModal() {
   // const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  
+  const [userData, setUserData] = React.useState("")
 // if(signOpen===true){
 //   setOpen(false)
 // }
+
+
+// const token =  AsyncStorage.getItem(token_storage_constants.AUTH_TOKEN)
+const [signUpdata, setSignUpData] = React.useState({
+  userName:"",
+  email:"",
+  password:"",
+})
+const [loginData, setLoginData] = React.useState({
+  email:"",
+  password:"",
+})
+
+const signUp=()=>{
+
+ apiHandle().post("/signup",signUpdata).then((e)=>{
+  console.log("okkkkkk",e);
+  localStorage.setItem("token",e.data.tokens.access_token)
+  
+  setSignOpen(false)
+
+  toast.success(e.data.message);
+ }).catch(x=>console.log(x))
+console.log(signUpdata);
+}
+const logIn=()=>{
+ let token= localStorage.getItem("token")
+
+ apiHandle(token).post("/login",signUpdata).then((e)=>{
+  console.log("okkkkkk",e);
+  toast.success(e.data.message);
+  setOpen(false);
+  setSignOpen(false)
+  setUserData(localStorage.getItem("user"))
+  localStorage.setItem("user",e.data.user)
+ }).catch(x=>console.log(x))
+console.log(signUpdata);
+}
+// console.log(result);
+
+function stringAvatar(name) {
+  let a=name.slice(0,1)
+
+  return {children: a}
+}
   return (
     <div>
-      <Button onClick={handleOpen}><Avatar>L</Avatar></Button>
+      <Button onClick={handleOpen}><Avatar  children={userData.slice(0,1)} /></Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -49,15 +100,15 @@ export default function BasicModal() {
             <Stack spacing={3} >
 
               <Stack>
-                <TextField id="outlined-basic" type='email' label="Email" variant="outlined" required color='warning' />
+                <TextField id="outlined-basic" onChange={(e)=>setLoginData({...loginData,email:e.target.value})} type='email' label="Email" variant="outlined" required color='warning' />
               </Stack>
 
               <Stack>
-                <TextField id="outlined-basic" type='password' label="Password" variant="outlined" required color='warning' />
+                <TextField id="outlined-basic" onChange={(e)=>setLoginData({...loginData,password:e.target.value})} type='password' label="Password" variant="outlined" required color='warning' />
               </Stack>
 
               <Stack>
-                <Button variant='contained' color='warning' >Login</Button>
+                <Button variant='contained' onClick={()=>logIn()} color='warning' >Login</Button>
               </Stack>
               <Stack>
                 <Link className={styles.link} onClick={()=>setSignOpen(true)} href={'#'}>Create An Account</Link>
@@ -83,18 +134,18 @@ export default function BasicModal() {
             <Stack spacing={3} >
 
               <Stack>
-                <TextField id="outlined-basic" type='text' label="User Name" variant="outlined" required color='warning' />
+                <TextField id="outlined-basic" onChange={(e)=>{setSignUpData({...signUpdata,userName:e.target.value})}} type='text' label="User Name" variant="outlined" required color='warning' />
               </Stack>
 
               <Stack>
-                <TextField id="outlined-basic" type='email' label="Email" variant="outlined" required color='warning' />
+                <TextField id="outlined-basic" onChange={(e)=>{setSignUpData({...signUpdata,email:e.target.value})}} type='email' label="Email" variant="outlined" required color='warning' />
               </Stack>
               <Stack>
-                <TextField id="outlined-basic" type='password' label="Password" variant="outlined" required color='warning' />
+                <TextField id="outlined-basic" onChange={(e)=>{setSignUpData({...signUpdata,password:e.target.value})}} type='password' label="Password" variant="outlined" required color='warning' />
               </Stack>
 
               <Stack>
-                <Button variant='contained' color='warning' >Signup</Button>
+                <Button onClick={()=>signUp()} variant='contained' color='warning' >Signup</Button>
               </Stack>
               <Stack>
                 <Link className={styles.link} onClick={()=>setSignOpen(false)} href={'#'}> Already Have an Account?</Link>

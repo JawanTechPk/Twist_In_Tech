@@ -6,9 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",  
+    "lint": "next lint",
     "export": "next export",
-    "deploy":"next build && next export && firebase deploy"
+    "deploy": "next build && next export && firebase deploy"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -17,7 +17,7 @@
     "@mui/material": "^5.11.1",
     "@mui/styled-engine-sc": "^5.11.0",
     "aos": "^2.3.4",
-    "axios": "^1.2.1",
+    "axios": "^1.2.2",
     "materialize-css": "^1.0.0-rc.2",
     "next": "^13.1.1",
     "popup-chat-react": "^1.0.5",
@@ -26,6 +26,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-scrollbars-custom": "^4.1.1",
+    "react-toastify": "^9.1.1",
     "styled-components": "^5.3.6"
   }
 }
