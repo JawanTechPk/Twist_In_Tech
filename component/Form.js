@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import styles from '../styles/custom.module.css'
+import styles from '../styles/navbarCss.module.css'
 import { Grid } from '@mui/material';
 
 
@@ -39,19 +39,19 @@ export default function ContactUs() {
 
 
               <Grid item sm={6} md={12} xs={12}    >
-                <label>Name</label>
+                <label style={{color:'white'}} >Name</label>
                 <input  placeholder='Name' className={styles.inp} />
               </Grid>
               <Grid item sm={6} md={12} xs={12}    >
-              <label>Email</label>
+              <label style={{color:'white'}}>Email</label>
                 <input placeholder='Email' className={styles.inp} />
               </Grid>
               <Grid item sm={6} md={12} xs={12}    >
-              <label>Subject</label>
+              <label style={{color:'white'}}>Subject</label>
                 <input placeholder='Subject' className={styles.inp} />
               </Grid>
               <Grid item sm={6} md={12} xs={12}    >
-              <label>Message / FeedBack</label>
+              <label style={{color:'white'}}>Message / FeedBack</label>
               {/* <textarea */}
                 <textarea   placeholder='Message / FeedBack' className={styles.textArea} />
               </Grid>

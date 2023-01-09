@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import sideimage from '../images/first_image.jpg'
 import imagesecond from '../images/second_image.jpg'
 import imagethird from '../images/third_image.jpg'
-import styles from '../styles/custom.module.css'
+import styles from '../styles/navbarCss.module.css'
 import { detailsData, detailSecondData, detailThirdData } from '../utils/servicesArray'
 
 
@@ -31,10 +31,13 @@ const DetailsScreen = () => {
                                 <Stack className={styles.detailssubheading} >This is the age of modern web designs, frameworks and tools. We utilize all of the latest tech to ensure our clients can give their customers the best web experience which ensures a high rate of conversion.</Stack>
                             </Stack>
 
-                            <Grid container alignItems='center' spacing={3} mt={2}   >
+                            <Grid container spacing={3} mt={2}   >
                                 {detailsData.map((e, i) => {
                                     return (
-                                        <Grid className={styles.DetailsBox} item sm={6} md={6} xs={12} lg={6}>
+                                        <Grid sx={{border:"1px solid red"}}  
+                                        
+                                        className={styles.DetailsBox} 
+                                        item sm={6} md={6} xs={12} lg={6}>
                                             <div data-aos-duration='1000' data-aos="fade-down" data-aos-easing="linear">
 
                                                 {e.name}

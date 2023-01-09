@@ -47,7 +47,7 @@
   
   .chatCon .chatbox .msgarea .left span {
     display: inline-block;
-    font-size: 15.5px;
+    font-size: 13.5px;
     border-radius: 15px;
     padding: 15px;
     background-color: rgb(233, 221, 162);
@@ -60,10 +60,10 @@
   
   .chatCon .chatbox .msgarea .right span {
     display: inline-block;
-    font-size: 17.5px;
+    font-size: 13.5px;
     border-radius: 15px;
     padding: 15px;
-    background-color: rgb(117, 105, 105);
+    background-color: rgb(130, 116, 116);
   }
   
   .chatCon .chatbox .footer {
@@ -82,7 +82,7 @@
     width: 80%;
     border-radius: 15px;
     background-color: rgba(f, f, f, 0.2);
-    color: white;
+    color: rgb(0, 0, 0);
   }
   
   .chatCon .chatbox .footer input:focus {

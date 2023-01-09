@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 // import { deepOrange, deepPurple } from '@mui/material/colors';
 import { Scrollbar } from 'react-scrollbars-custom';
+import BasicModal from './Modal';
 
 
 
@@ -29,10 +30,10 @@ const PopChat = (props) => {
             msg: 'hi'
         },
         {
-            msg: 'hello'
+            msg: 'how are you'
         },
         {
-            msg: 'hi'
+            msg: 'am good'
         },
         {
             msg: 'hello'
@@ -68,7 +69,7 @@ const PopChat = (props) => {
     return (
         <div className={styles.chatCon}>
             <div className={styles.chatbox} style={chatopen ? show : hide}>
-                <div className={styles.header}><Avatar sx={{ bgcolor: '#f89500' }}>IB</Avatar>ibrar</div>
+                <div className={styles.header}><BasicModal />ibrar</div>
 
                 <div className={styles.msgarea}>
                         {
@@ -84,7 +85,7 @@ const PopChat = (props) => {
                 </div>
 
                 <div className={styles.footer}>
-                    <input type="text" ref={textRef} placeholder='Enter your Query' />
+                    <input color='black' type="text" ref={textRef} placeholder='Enter your Query' />
                     <div className={styles.buttonSend} >
 
 

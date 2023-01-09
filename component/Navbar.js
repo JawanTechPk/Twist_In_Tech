@@ -18,7 +18,7 @@ import Link from 'next/link';
 import AdbIcon from '@mui/icons-material/Adb';
 import logoImg from '../images/logo.png'
 import Image from 'next/image';
-import styles from '../styles/custom.module.css'
+import styles from '../styles/navbarCss.module.css'
 import HomeScreen from '../pages/home';
 import { Stack } from '@mui/material';
 import Card from './Form';
@@ -28,7 +28,7 @@ import DetailsScreen from '../pages/details';
 import OurProject from '../pages/ourProject';
 import ContactScreen from '../pages/contact';
 import FooterScreen from '../pages/footer';
-import ChatApp from './Chat_App';
+// import ChatApp from './Chat_App';
 import PopChat from './extra';
 import styless from '../styles/extra.module.css'
 
@@ -87,7 +87,10 @@ function Navbar(props) {
             <div className={styles.chatt}> <PopChat/></div>
             
             <CssBaseline />
-            <AppBar component="nav" className={styles.AppBarStyle}     >
+            <AppBar component="nav"
+             sx={{backgroundColor:'transparent', backdropFilter:'blur(6px)',zIndex:1}}  className={styles.AppBarStyle}  
+             
+             >
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -157,7 +160,7 @@ function Navbar(props) {
            
 
                 <Stack mb={5} alignItems='center' >
-                    <HomeScreen  />
+                    <HomeScreen contact='#contactRoute' project='#projectRoute'  />
 
                 </Stack>
                

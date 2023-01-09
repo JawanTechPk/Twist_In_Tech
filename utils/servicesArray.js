@@ -49,15 +49,15 @@ export const servicesData = [
 
 
 export const detailsData = [
-    {
-        name: "UI/UX Design"
-    },
+    // {
+    //     name: "UI/UX Design"
+    // },
     {
         name: "React.js"
     },
-    {
-        name: "Vue.js Development"
-    },
+    // {
+    //     name: "Vue.js Development"
+    // },
     {
         name: "Angular Development"
     },
@@ -69,23 +69,44 @@ export const detailsData = [
     },
 ]
 export const detailSecondData = [
-    {
-        name: "UI/UX Design"
-    },
+    // {
+    //     name: "UI/UX Design"
+    // },
     {
         name: "React Native Development"
     },
     {
         name: "Flutter Development"
     },
+    // {
+    //     name: "Kotlin Development"
+    // },
     {
-        name: "Kotlin Development"
-    },
-    {
-        name: "Redux Development"
+        name: "IOS & Android App department"
     },
     {
         name: "Apps Deployment"
+    },
+]
+
+export const detailThirdData = [
+    // {
+    //     name: "UI/UX Design"
+    // },
+    {
+        name: "Amazon Web Services (AWS)"
+    },
+    // {
+    //     name: "Oracle Cloud"
+    // },
+    {
+        name: "Heroku"
+    },
+    {
+        name: "Azure Deployment"
+    },
+    {
+        name: "Google Cloud Deployment"
     },
 ]
 export const projectData = [
@@ -105,24 +126,4 @@ export const projectData = [
         icon:<BsCheckLg  color="#f89500" size={30}/>
     },
     
-]
-export const detailThirdData = [
-    {
-        name: "UI/UX Design"
-    },
-    {
-        name: "Amazon Web Services (AWS)"
-    },
-    {
-        name: "Oracle Cloud"
-    },
-    {
-        name: "Heroku"
-    },
-    {
-        name: "Azure Deployment"
-    },
-    {
-        name: "Google Cloud Deployment"
-    },
 ]

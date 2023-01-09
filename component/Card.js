@@ -2,7 +2,7 @@ import React from 'react'
 import { Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import Box from '@mui/material/Box';
-import styles from '../styles/custom.module.css'
+import styles from '../styles/navbarCss.module.css'
 
 
 const Card = (props) => {
@@ -20,7 +20,7 @@ const Card = (props) => {
                             <Typography className={styles.cardHeadings} variant="h5">{textFirst} </Typography>
                         </Stack>
                         <Stack pt={2} sx={{ textAlign: 'center' }}   >
-                            <Typography className={styles.cardHeadings} variant="p">{textSecond} </Typography>
+                            <Typography className={styles.cardHeadingsSub} variant="p">{textSecond} </Typography>
                         </Stack>
                     </Stack>
                 </Box>

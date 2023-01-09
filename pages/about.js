@@ -1,6 +1,6 @@
 import { Container, Grid, Stack } from '@mui/material'
 import React from 'react'
-import styles from '../styles/custom.module.css'
+import styles from '../styles/navbarCss.module.css'
 import sirImage from '../images/sir_image.jpeg'
 // import { Container } from '@mui/system'
 import Image from 'next/image'
@@ -42,7 +42,7 @@ const AboutScreen = () => {
               <Stack>
                 <div data-aos-duration='1000' data-aos="fade-down" data-aos-easing="linear">
 
-                  <Stack className={styles.detailsHeading} >CEO Muhamamd Ali Mughal Message :</Stack>
+                  <Stack className={styles.detailsHeading} > M Ali Mughal (CEO)</Stack>
                   <Stack className={styles.detailssubheading} >We aim to be the most efficient provider of business process outsourcing services by setting the industry standards for cost and quality of services. Our long term success will be driven by our relentless focus on recruiting and developing the most talented pool of human capital in our industry</Stack>
                 </div>
               </Stack>

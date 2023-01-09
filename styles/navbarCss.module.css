@@ -5,25 +5,19 @@
     -o-background-size: cover;
     background-size: cover;
     height: 100%; 
-    /* backdrop-filter:brightness(); */
-    
 
     
  }
 
- /* .AppBarStyle{
-  background-color:transparent;
-  backdrop-filter: blur(6px);
-  z-index: 1;
-} */
 .btnhover{
   transition: all 0.25s linear ;
 }
 .btnhover:hover{
-  -ms-transform: scale(4.6);
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-  border: 1px solid white;
+  -ms-transform: scale(4);
+  -webkit-transform: scale(1);
+  transform: scale(1.2);
+  border-bottom: 3px solid #f89500;
+  /* font-size: 13px; */
   
 
 }
@@ -46,26 +40,7 @@
  
 }
 
-.btnSection{
-  border: 1px solid white;
-  color: white;
-  border-radius: 10px;
-  font-size: 1.7em;
-  padding: 10px;
 
-}
-
-.btnSection:hover{
-  transition: all 0.25s linear ;
-  border: 1px solid white;
-  color: white;
-  border-radius: 10px;
-  font-size: 1.7em;
-  padding: 10px;
-  font-weight: bold;
-  backdrop-filter: blur(10px);
-  
-}
 /*   Home Screen Styling   */
 
 /*   Services Screen Styling   */
@@ -80,6 +55,7 @@
   font-family: "Saira",sans-serif;
   text-align: center;
   font-size: 1.2em;
+  color: white;
 }
 
 
@@ -97,11 +73,19 @@
     border-radius: 10px;    
     cursor: pointer;
     box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 5px 0px;
+    color: white;
     
 }
 .cardHeadings {
    font-weight: bold;
    
+}
+.cardHeadingsSub{
+  font-weight: bold;
+  font-size: 14px;
+  /* float: left; */
+  text-align: left;
+
 }
 
 
@@ -123,6 +107,7 @@
   font-family: "Saira",sans-serif;
   text-align: center;
   font-size: 1em;
+  color: white;
 }
 
 .DetailsBox:hover {
@@ -132,6 +117,9 @@
 
 .DetailsBox {
   border: 1px;
+  color: white;
+  margin-top: 10px;
+  /* margin-left: 1px; */
   
   border-radius: 10px;    
   cursor: pointer;
@@ -155,6 +143,7 @@
   font-family: "Saira",sans-serif;
   text-align: center;
   font-size: 1em;
+  color: white;
 }
 
 .ProjectBox:hover {
@@ -198,6 +187,8 @@
   height: auto;
   min-height: 60px;
   border-radius: 6px;
+  margin-top: 5px;
+  padding: 10px;
 }
 .inp::placeholder{
   color: white;
@@ -312,5 +303,11 @@
 } */
 
 /* / Message icon Section   / */
-
+.link{
+  text-decoration: underline;
+  display: flex;
+  justify-content: end;
+  color: #d7ab69;
+  font-size: 12px;
+}
 /* / Message icon Section   / */

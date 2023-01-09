@@ -2,7 +2,7 @@ import { Grid, Stack } from '@mui/material';
 import { Container } from '@mui/system';
 import Aos from 'aos';
 import React, { useEffect } from 'react'
-import styles from '../styles/custom.module.css'
+import styles from '../styles/navbarCss.module.css'
 import { projectData } from '../utils/servicesArray';
 
 
@@ -35,8 +35,8 @@ const OurProject = () => {
                                     <Stack className={styles.ProjectBox}   >
                                         <Stack mt={2} alignItems='center'  >
                                             <Stack>{e.icon}</Stack>
-                                            <Stack fontWeight='bold' fontSize={20} mt={1} >{e.number}</Stack>
-                                            <Stack fontWeight='bold' fontSize={20} mt={1} >{e.title}</Stack>
+                                            <Stack fontWeight='bold' fontSize={20} color='white' mt={1} >{e.number}</Stack>
+                                            <Stack fontWeight='bold' fontSize={20} color='white' mt={1} >{e.title}</Stack>
                                         </Stack>
                                     </Stack>
                                 </div>

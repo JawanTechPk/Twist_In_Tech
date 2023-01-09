@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react'
 import Card from '../component/Card'
-import styles from '../styles/custom.module.css'
+import styles from '../styles/navbarCss.module.css'
 import { servicesData } from '../utils/servicesArray'
 
 
