@@ -11,10 +11,12 @@ import { constants } from '../utils/constants'
 
 
 const AboutScreen = () => {
-  const apiData=useContext(NoteContext)
+  const apiData = useContext(NoteContext)
 
-  const {state, update} = apiData
+  const { state, update } = apiData
   console.log(apiData.state);
+
+
 
   return (
     <>
@@ -22,9 +24,9 @@ const AboutScreen = () => {
         <Stack mb={5} className={styles.servicesHeading} >About Us</Stack>
         <Container>
 
-          <Button onClick={()=>update({name:'irfan',message:"succesfull"},[constants.USER_DATA
+          <Button onClick={() => update({ name: 'irfan', message: "succesfull" }, [constants.USER_DATA
           ])}>
-change
+            change
           </Button>
 
 
@@ -43,9 +45,9 @@ change
                     objectFit: 'contain',
                     width: '100%',
                     height: 'auto',
-                    minWidth:'40px',
-                    maxWidth:'400px'
-                    
+                    minWidth: '40px',
+                    maxWidth: '400px'
+
                     // minHeight:'500px'
                   }}
                 />
@@ -57,7 +59,7 @@ change
 
                   <Stack className={styles.detailsHeading} > M Ali Mughal (CEO)</Stack>
                   <Stack className={styles.detailssubheading} >We aim to be the most efficient provider of business process outsourcing services by setting the industry standards for cost and quality of services. Our long term success will be driven by our relentless focus on recruiting and developing the most talented pool of human capital in our industry</Stack>
-        
+
                 </div>
               </Stack>
 

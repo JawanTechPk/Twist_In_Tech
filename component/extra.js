@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 //import the css here
 import styles from '../styles/extra.module.css'
 import { IoMdSend } from 'react-icons/io'
@@ -10,10 +10,37 @@ import Avatar from '@mui/material/Avatar';
 // import { deepOrange, deepPurple } from '@mui/material/colors';
 import { Scrollbar } from 'react-scrollbars-custom';
 import BasicModal from './Modal';
+import { constants } from '../utils/constants';
+import NoteContext from '../pages/context/notecontext';
+import axios from 'axios';
+import { apiHandle } from '../pages/config/apiHandle';
 
 
 
-const PopChat = (props) => {
+const PopChat = (props, data) => {
+
+
+    const apiData = useContext(NoteContext)
+
+    const { state, update } = apiData
+    // let token = localStorage.getItem("token")
+
+    const [msgDataGet, setMsgDataGet] = useState([])
+    useEffect(() => {
+
+        apiHandle(localStorage.getItem('token')).get('/get-user-chats').then((res) => {
+            setMsgDataGet(res?.data?.chats)
+
+        }).catch((err) => {
+            console.log(err);
+        })
+
+
+    }, [])
+
+    console.log(msgDataGet);
+
+
     let hide = {
         display: 'none',
     }
@@ -57,41 +84,66 @@ const PopChat = (props) => {
     ]
 
     const [chatopen, setChatopen] = useState(false)
+    const [userData, setUserData] = useState('')
+    const [dataa, setDataa] = useState('')
+
+
     const toggle = e => {
         setChatopen(!chatopen)
     }
+    console.log(data);
 
     const handleSend = e => {
-        const get = props.getMessage
-        get(textRef.current.value)
+        // const get = props.getMessage
+        // get(textRef.current.value)
+        apiHandle(localStorage.getItem('token')).post('/chat/auth-chat', { message: dataa }).then((res) => {
+            // update(dataa, constants.CHAT_SEND)
+            setMsgDataGet(res?.data?.data)
+            setDataa('')
+            // console.log("ajaaaaaaaaaaaaa",res);
+        }).catch((err) => {
+            console.log(err);
+        })
+
     }
+
+    useEffect(() => {
+        setUserData(localStorage.getItem("user"))
+
+    }, [])
+
+
+    const abc = () => {
+        setUserData(localStorage.getItem("user"))
+
+    }
+
 
     return (
         <div className={styles.chatCon}>
             <div className={styles.chatbox} style={chatopen ? show : hide}>
-                <div className={styles.header}><BasicModal />ibrar</div>
+                <div className={styles.header}><BasicModal abc={abc} /></div>
 
                 <div className={styles.msgarea}>
-                        {
-                            messages.map((msg, i) => (
-                                i % 2 ? (
-                                    <p className={styles.right}><span>{msg.msg}</span></p>
-                                ) : (
-                                    <p className={styles.left}><span>{msg.msg}</span></p>
-                                )
-                            ))
-                        }
+                    {
+                        msgDataGet?.map((e, i) => (
+                            <p className={styles.right}><span>{e.message}</span></p>
+                        ))
+                    }
 
                 </div>
 
-                <div className={styles.footer}>
-                    <input color='black' type="text" ref={textRef} placeholder='Enter your Query' />
-                    <div className={styles.buttonSend} >
+                {userData ?
+                    <div className={styles.footer}>
+                        <input value={dataa} onChange={(e) => setDataa(e.target.value)} color='black' type="text" ref={textRef} placeholder='Enter your Query' />
+                        <div className={styles.buttonSend} >
 
 
-                        <IoMdSend width={30} color='#f89500' onClick={handleSend} />
+                            <IoMdSend width={30} color='#f89500' onClick={handleSend} />
+                        </div>
                     </div>
-                </div>
+                    : null}
+
             </div>
             <div className={styles.pop}>
                 <p>

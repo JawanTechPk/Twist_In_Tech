@@ -39,8 +39,9 @@
     overflow-y: scroll;
     height: 370px;
     padding: 15px;
-    scrollbar-color: rebeccapurple green;
-  scrollbar-width: thin;
+    /* scrollbar-color: rebeccapurple green; */
+  /* scrollbar-width: thin; */
+  /* scroll-behavior:bottom ; */
     
   }
 
